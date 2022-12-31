@@ -27,8 +27,8 @@ test('server - listen', async t => {
   t.ok(serverSocket, 'save socket in slashtag.sockets')
 
   await alice.close()
-  await dht.destroy()
   await socket.destroy()
+  await dht.destroy()
 })
 
 test('server - unlisten', async t => {
@@ -54,6 +54,6 @@ test('server - unlisten', async t => {
   t.is(alice.dht.listening.size, 0, 'unlistened on the dht')
 
   await alice.close()
-  await dht.destroy()
   await socket.destroy()
+  await dht.destroy()
 })
